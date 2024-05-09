@@ -96,3 +96,17 @@ console.log((chuVaki.filter(val => val.gender !== 'male')).map(val => val.name))
 // Fourth
 console.log('*******')
 console.log((chuVaki.filter(val => val.isActive === false)).map(it => it.name))
+// Fifth
+function userForEmail(mail){
+    return chuVaki.filter(val => val.email === mail)
+}
+console.log(userForEmail('elmahead@omatom.com'))
+// Sixth
+function guysInAge(min,max){
+    return chuVaki.filter(val => val.age >= min && val.age <= max)
+}
+console.log(guysInAge(25,35))
+// Seventh
+let sum = 0
+chuVaki.forEach(val => {sum += val.balance})
+console.log(sum)
