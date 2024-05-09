@@ -83,4 +83,7 @@ let chuVaki = [
     age: 39,
     },
 ];
+// First
 console.log(chuVaki.map(val => val.name))
+// Second
+console.log(chuVaki.map(val => val.eyeColor))
