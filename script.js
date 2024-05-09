@@ -84,6 +84,15 @@ let chuVaki = [
     },
 ];
 // First
+console.log('*******')
 console.log(chuVaki.map(val => val.name))
 // Second
+console.log('*******')
 console.log(chuVaki.map(val => val.eyeColor))
+// Third
+console.log('*******')
+console.log((chuVaki.filter(val => val.gender === 'male')).map(val => val.name))
+console.log((chuVaki.filter(val => val.gender !== 'male')).map(val => val.name))
+// Fourth
+console.log('*******')
+console.log((chuVaki.filter(val => val.isActive === false)).map(it => it.name))
