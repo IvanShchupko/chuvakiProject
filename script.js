@@ -97,16 +97,17 @@ console.log((chuVaki.filter(val => val.gender !== 'male')).map(val => val.name))
 console.log('*******')
 console.log((chuVaki.filter(val => val.isActive === false)).map(it => it.name))
 // Fifth
-function userForEmail(mail){
-    return chuVaki.filter(val => val.email === mail)
-}
-console.log(userForEmail('elmahead@omatom.com'))
-// Sixth
+console.log('*******')
+console.log(chuVaki.find(val => val.email === 'sharlenebush@tubesys.com'))
+console.log(chuVaki.find(val => val.email === 'elmahead@omatom.com'))
+// Sixth 
+console.log('*******')
 function guysInAge(min,max){
     return chuVaki.filter(val => val.age >= min && val.age <= max)
 }
 console.log(guysInAge(25,35))
 // Seventh
+console.log('*******')
 let sum = 0
 chuVaki.forEach(val => {sum += val.balance})
 console.log(sum)
