@@ -84,30 +84,45 @@ let chuVaki = [
     },
 ];
 // First
-console.log('*******')
+console.log('***First***')
 console.log(chuVaki.map(val => val.name))
 // Second
-console.log('*******')
+console.log('***Second***')
 console.log(chuVaki.map(val => val.eyeColor))
 // Third
-console.log('*******')
+console.log('***Third***')
 console.log((chuVaki.filter(val => val.gender === 'male')).map(val => val.name))
 console.log((chuVaki.filter(val => val.gender !== 'male')).map(val => val.name))
 // Fourth
-console.log('*******')
+console.log('***Fourth***')
 console.log((chuVaki.filter(val => val.isActive === false)).map(it => it.name))
 // Fifth
-console.log('*******')
+console.log('***Fifth***')
 console.log(chuVaki.find(val => val.email === 'sharlenebush@tubesys.com'))
 console.log(chuVaki.find(val => val.email === 'elmahead@omatom.com'))
 // Sixth 
-console.log('*******')
+console.log('***Sixth***')
 function guysInAge(min,max){
     return chuVaki.filter(val => val.age >= min && val.age <= max)
 }
 console.log(guysInAge(25,35))
 // Seventh
-console.log('*******')
+console.log('**Seventh**')
 let sum = 0
 chuVaki.forEach(val => {sum += val.balance})
 console.log(sum)
+// Eigth
+console.log('***Eigth***')
+function friendsNames(friend){
+    return (chuVaki.filter(val => val.friends.includes(friend))).map(val => val.name)
+}
+console.log(friendsNames('Sharron Pace'))
+// Nineth
+console.log('***Nineth***')
+console.log((chuVaki.filter(val => val.friends.length === 3).map(val => val.name)), ' have 3 friends')
+console.log((chuVaki.filter(val => val.friends.length === 2).map(val => val.name)), ' have 2 friends')
+console.log((chuVaki.filter(val => val.friends.length === 1).map(val => val.name)), ' have only friend')
+// Tenth
+console.log('***Tenth***')
+let peopleSkills = (chuVaki.map(val => val.skills).join(',')).slice(',').split(',')
+console.log(peopleSkills.filter((num,index) => peopleSkills.indexOf(num) === index))
